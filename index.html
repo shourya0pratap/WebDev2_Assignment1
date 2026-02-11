@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-gradient">
+    <h1 class="main-title">🎯 Smart Event Dashboard</h1>
+
+    <div id="mainContainer">
+      <div id="formContainer" class="card">
+        <h2>Add New Event</h2>
+        <form id="eventForm">
+          <label for="eventName">Event Title:</label>
+          <input type="text" id="eventName" required />
+
+          <label for="eventDate">Event Date:</label>
+          <input type="date" id="eventDate" required />
+
+          <label for="eventCategory">Category:</label>
+          <select id="eventCategory">
+            <option>Conference</option>
+            <option>Workshop</option>
+            <option>Social</option>
+          </select>
+
+          <label for="eventDescription">Description:</label>
+          <textarea id="eventDescription" required></textarea>
+
+          <button type="submit" id="add-btn">Add Event</button>
+        </form>
+      </div>
+
+      <div id="listSection" class="card">
+        <h2>My Events</h2>
+        <div class="button-row">
+          <button type="button" id="clear-btn" class="secondary-btn">
+            Clear All Events
+          </button>
+          <button type="button" id="sample-btn" class="secondary-btn">
+            Add Sample Events
+          </button>
+        </div>
+        <div id="eventContainer">
+          <p class="empty-msg">No events yet. Add your first event!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card demo-section">
+      <h2>DOM Manipulation Demo</h2>
+      <div class="demo-box">
+        <p><strong>innerText vs innerHTML vs textContent</strong></p>
+      </div>
+    </div>
+  </body>
+</html>
