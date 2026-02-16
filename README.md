@@ -4,7 +4,7 @@
 The Smart Event Dashboard is a dynamic, single-page web application built to manage event cards through real-world DOM manipulation. This project was developed as part of the Web Dev II (Advanced JS & React) course to demonstrate mastery of vanilla JavaScript operations, event handling, and debugging.
 
 # 🔗 Live Demo
-[**View the Dashboard here**]()
+[**View the Dashboard here**](https://shourya0pratap.github.io/WebDev2_Assignment1/)
 
 # 🚀 Features
 The dashboard implements the following core functional requirements:
