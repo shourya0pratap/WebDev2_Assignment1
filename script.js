@@ -1,3 +1,4 @@
+// Fetch
 const eventForm = document.getElementById("eventForm");
 const eventNameInput = document.getElementById("eventName");
 const eventDateInput = document.getElementById("eventDate");
@@ -8,18 +9,19 @@ const clearAllBtn = document.getElementById("clear-btn");
 const addSampleBtn = document.getElementById("sample-btn");
 const eventContainer = document.getElementById("eventContainer");
 
+// Sample Events
 const sampleEvents = [
   {
-    title: "Web Dev Workshop",
-    date: "2026-12-04",
-    category: "Workshop",
-    description: "Deep dive into CSS Grid and Flexbox layouts.",
+    title: "Birthday",
+    date: "2026-02-26",
+    category: "Social",
+    description: "Happy Birthday!",
   },
   {
-    title: "Tech Networking",
-    date: "2026-12-10",
+    title: "Hack KRMU",
+    date: "2026-02-18",
     category: "Social",
-    description: "Meet local developers and share project ideas.",
+    description: "Hackathon",
   },
 ];
 
@@ -36,6 +38,7 @@ function updateEmptyState() {
   }
 }
 
+// Create Card
 function createEventCard(eventData) {
   const card = document.createElement("div");
   card.className = "event-item";
@@ -61,6 +64,7 @@ function createEventCard(eventData) {
   return card;
 }
 
+// Submit Form
 eventForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -95,8 +99,10 @@ clearAllBtn.addEventListener("click", () => {
   }
 });
 
+// Target DOM Demo Box
 const demoBox = document.querySelector(".demo-box");
 
+// Update DOM Tracker
 function updateTracker(type, value) {
   demoBox.innerHTML = `
     <div class="tracker-line">
@@ -110,15 +116,16 @@ function updateTracker(type, value) {
   `;
 }
 
+// Mouse Events
 window.addEventListener("mousedown", (e) => {
   const buttons = ["Left Click", "Middle Click", "Right Click"];
   updateTracker("Mouse Pressed", buttons[e.button] || `Button ${e.button}`);
 });
 
+// Keyboard Events
 window.addEventListener("keydown", (e) => {
   if (e.key === " ") e.preventDefault();
 
   const keyName = e.key === " " ? "Space" : e.key;
   updateTracker("Key Pressed", keyName);
 });
-
